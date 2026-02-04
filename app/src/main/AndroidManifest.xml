@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com"
+    package="com.exemplo.pet">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="Meu Pet Virtual"
+        android:theme="@android:style/Theme.DeviceDefault">
+
+        <activity 
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <!-- Define que esta é a tela que abre ao clicar no ícone -->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>

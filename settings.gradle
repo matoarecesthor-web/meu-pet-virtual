@@ -1,0 +1,2 @@
+rootProject.name = "MeuPetVirtual"
+include ':app'
