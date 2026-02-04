@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Corpo -->
+    <path
+        android:fillColor="#BFA57D"
+        android:pathData="M50,10 C20,10 5,40 5,65 C5,85 25,95 50,95 C75,95 95,85 95,65 C95,40 80,10 50,10 Z" />
+    <!-- Olho Esquerdo -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,45 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M35,45 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+    <!-- Olho Direito -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M65,45 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M65,45 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+</vector>

@@ -1,15 +1,11 @@
-plugins {
-    id 'com.android.application'
-}
-
 android {
-    namespace 'com.exemplo.pet'
-    compileSdk 34 // Versão atual do Android SDK
-
+    namespace 'com.meupet.virtual' // Verifique se este é o seu pacote
+    compileSdk 35 
+    
     defaultConfig {
-        applicationId "com.exemplo.pet"
-        minSdk 24    // Roda em quase qualquer Android desde 2016
-        targetSdk 34
+        applicationId "com.meupet.virtual"
+        minSdk 24    
+        targetSdk 35 
         versionCode 1
         versionName "1.0"
     }
@@ -17,19 +13,19 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     
-    // Essencial para o Java entender o código que escrevemos
+    // Use a versão 17 aqui para combinar com o suporte do Android 15/Gradle 8.7+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 }
 
 dependencies {
-    // Bibliotecas básicas para interface e componentes do Android
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.appcompat:appcompat:1.7.0' // Versão atualizada
+    implementation 'com.google.android.material:material:1.12.0' // Versão estável recente
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
 }

@@ -1,13 +1,10 @@
 buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
     dependencies {
-        // Link para o plugin do Android que o Gradle vai usar
-        classpath 'com.android.tools.build:gradle:8.1.0'
+        // Esta versão é necessária para o Android 15
+        classpath 'com.android.tools.build:gradle:8.7.0'
     }
 }
+
 
 allprojects {
     repositories {

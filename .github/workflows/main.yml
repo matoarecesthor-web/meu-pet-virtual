@@ -6,16 +6,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Configurar Java
+      
+      - name: Configurar Java 17 para Gradle
         uses: actions/setup-java@v4
         with:
           java-version: '17'
-          distribution: 'temurin'
+          distribution: 'temurin' # 'temurin' ou 'zulu' são boas escolhas
+          cache: 'gradle' # Adiciona cache para acelerar builds futuros
+          
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-      - name: Compilar APK
-        run: chmod +x gradlew && ./gradlew assembleDebug
-      - name: Salvar APK
+        # Esta action cuida de instalar as ferramentas necessárias
+        uses: android-actions/setup-android@v3 
+
+      - name: Dar permissão de execução ao Gradle Wrapper
+        run: chmod +x gradlew 
+        
+      - name: Compilar APK de Debug
+        run: ./gradlew assembleDebug --no-daemon # --no-daemon é uma boa prática em CI/CD
+
+      - name: Salvar APK como Artefato
+        # Esta action facilita o download do APK gerado após o build
         uses: actions/upload-artifact@v4
         with:
           name: meu-pet-apk
